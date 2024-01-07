@@ -1,0 +1,12 @@
+<header>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <img class="menu-icon" src="assets/menu-icon.png" alt="menu-icon">
+    </button>   
+    <span class="title">LITTLE LINGUIST</span>
+    <img class="user-icon" src="assets/user-icon.png" alt="user-icon">
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item >Management Mode</button>
+        <button mat-menu-item >Game Mode</button>
+    </mat-menu>
+</header>

@@ -1,0 +1,18 @@
+.footer {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 121, 68);
+    padding: 20px 0;
+    gap: 10px;
+
+    .title {
+        font-weight: bold;
+    }
+
+    img {
+        cursor: pointer;
+    }
+}

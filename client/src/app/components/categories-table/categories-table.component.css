@@ -1,0 +1,24 @@
+.categories-table-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    align-items: center;
+    gap: 20px;
+    
+    .title {
+        font-size: 30px;
+        font-weight: bold;
+        align-items: center;
+    }
+
+    .new-category-btn {
+        margin-top: 200px;
+        background-color: rgb(76, 76, 205);
+        width: 250px;
+        font-weight: bold;
+    }
+}
+
+img {
+    cursor: pointer;
+}

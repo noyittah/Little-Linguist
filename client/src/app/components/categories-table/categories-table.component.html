@@ -1,0 +1,34 @@
+<div class="categories-table-container">
+    <span class="title">Word Categories</span>
+  
+    <table mat-table [dataSource]="wordCategories" class="mat-elevation-z8">
+      <ng-container class="colum" matColumnDef="categoryName">
+        <th mat-header-cell *matHeaderCellDef> Category Name </th>
+        <td mat-cell *matCellDef="let category"> {{ category.categoryName }} </td>
+      </ng-container>
+  
+      <ng-container class="colum" matColumnDef="numberOfWords">
+        <th mat-header-cell *matHeaderCellDef> Number of Words </th>
+        <td mat-cell *matCellDef="let category"> {{ calculateNumberOfWords(category) }} </td>
+      </ng-container>
+  
+      <ng-container class="colum" matColumnDef="lastModificationDate">
+        <th mat-header-cell *matHeaderCellDef> Last Modified </th>
+        <td mat-cell *matCellDef="let category"> {{ category.lastModificationDate | date }} </td>
+      </ng-container>
+  
+      <ng-container class="colum" matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let category"> 
+            <img src="assets/edit-icon.png" alt="edit-icon">
+            <img src="assets/remove-icon.png" (click)="onDeleteCategory(category)" alt="delete-icon">
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="columns"></tr>
+      <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+    </table>
+
+    <button class="new-category-btn" mat-button color="basic">New Category</button>
+</div>
+  
